@@ -1,43 +1,118 @@
 <!DOCTYPE html>
 <html>
-<!--Dit is de goede versie 14:05-->
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="HTML/dataproj.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 </body>
-    <div class="page">
-      <span class="menu_toggle" id="menu_toggle" onclick="myFunction()">
-        <i class="menu_open fa fa-bars fa-lg"></i>
-        <i class="menu_close fa fa-times fa-lg"></i>
-      </span>
-      <ul class="menu_items">
-        <li><a href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a></li>
-        <li><a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
-        <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
-      </ul>
-      <main class="content" id="content" onclick="myFunction2()">
-        <div class="content_inner">
-          <h1>The mysterious red button of doom</h1>
-          <p>Do <strong>not</strong> push that big, red button in the corner. People will die. You have been warned. Do not do it.</p>
-
-          <p>Lorem ipsum dolor sit amet, accusantium corporis sint perspiciatis. Excepturi earum nobis soluta, doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
-        </div>
-      </main>
+    <div id="navigation">
+      <nav>
+        <div class="close"></div>
+        <a href="#">Home</a> <a href="#">Map</a> <a href="#">Statistics</a> <a href="#">About us</a> </nav>
     </div>
+    <div id="main-content">
+      <div id="content-front">
+        <div class="hamburger"><span></span></div>
+          <div id="container">
+            <section>
+              <h1>About us</h1>
+
+              <p><strong> "Never bring a knife to a gun fight!"</strong></p>
+              <p>This quote is quite often said because you will never be able to reach the shooter with a knife</p>
+              <p>We decided to make this site because eventhough sometimes sound travels faster then a bullet, or one could argue a rumour does to, we believe and know one things for certain:</p>
+              <p>A bullet will never travel as fast as a bullet! So with the light from people's screens, we hope to be faster then a bullet and reach people's minds and human hearth's</p>
+
+              <p>On this site we will inform you about the statistics surrounding gun violence in the United States of America!</p>
+              <div class="jquery-script-ads" style="margin:30px auto;"><script type="text/javascript"><!--
+              google_ad_client = "ca-pub-2783044520727903";
+              /* jQuery_demo */
+              google_ad_slot = "2780937993";
+              google_ad_width = 728;
+              google_ad_height = 90;
+              //-->
+              </script>
+              <script type="text/javascript"
+              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+              </script></div>
+          </section>
+          <section></section>
+          <section></section>
+          <section></section>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
+    var navigationMenu = {
+        $window: $('#main-content'),
+        $contentFront: $('#content-front'),
+        $hamburger: $('.hamburger'),
+        offset: 1800,
+        pageHeight: $('#content-front').outerHeight(),
+        open: function () {
+            this.$window.addClass('tilt');
+            this.$hamburger.off('click');
+            $('#container, .hamburger').on('click', this.close.bind(this));
+            this.hamburgerFix(true);
+            console.log('opening...');
+        },
+        close: function () {
+            this.$window.removeClass('tilt');
+            $('#container, .hamburger').off('click');
+            this.$hamburger.on('click', this.open.bind(this));
+            this.hamburgerFix(false);
+            console.log('closing...');
+        },
+        updateTransformOrigin: function () {
+            scrollTop = this.$window.scrollTop();
+            equation = (scrollTop + this.offset) / this.pageHeight * 100;
+            this.$contentFront.css('transform-origin', 'center ' + equation + '%');
+        },
+        hamburgerFix: function (opening) {
+            if (opening) {
+                $('.hamburger').css({
+                    position: 'absolute',
+                    top: this.$window.scrollTop() + 30 + 'px'
+                });
+            } else {
+                setTimeout(function () {
+                    $('.hamburger').css({
+                        position: 'fixed',
+                        top: '30px'
+                    });
+                }, 300);
+            }
+        },
+        bindEvents: function () {
+            this.$hamburger.on('click', this.open.bind(this));
+            $('.close').on('click', this.close.bind(this));
+            this.$window.on('scroll', this.updateTransformOrigin.bind(this));
+        },
+        init: function () {
+            this.bindEvents();
+            this.updateTransformOrigin();
+        }
+    };
+    navigationMenu.init();
+    </script>
+    <script type="text/javascript">
 
-    function myFunction() {
-        menuelement = document.getElementById("menu_toggle");
-        menuelement.classlist.toggle('shazam')
-    }
-    function myFunction2() {
-        contelement = document.getElementById("content");
-        contelement.classlist.toggle('shazam')
-    }
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
 
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
     </script>
 </body>
