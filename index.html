@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--Dit is de goede versie 14:05-->
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="HTML/dataproj.css">
+</head>
+
+</body>
+    <div class="page">
+      <span class="menu_toggle" id="menu_toggle" onclick="myFunction()">
+        <i class="menu_open fa fa-bars fa-lg"></i>
+        <i class="menu_close fa fa-times fa-lg"></i>
+      </span>
+      <ul class="menu_items">
+        <li><a href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a></li>
+        <li><a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
+        <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
+      </ul>
+      <main class="content" id="content" onclick="myFunction2()">
+        <div class="content_inner">
+          <h1>The mysterious red button of doom</h1>
+          <p>Do <strong>not</strong> push that big, red button in the corner. People will die. You have been warned. Do not do it.</p>
+
+          <p>Lorem ipsum dolor sit amet, accusantium corporis sint perspiciatis. Excepturi earum nobis soluta, doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+        </div>
+      </main>
+    </div>
+    <script>
+
+    function myFunction() {
+        menuelement = document.getElementById("menu_toggle");
+        menuelement.classlist.toggle('shazam')
+    }
+    function myFunction2() {
+        contelement = document.getElementById("content");
+        contelement.classlist.toggle('shazam')
+    }
+
+
+    </script>
+</body>
+</html>
