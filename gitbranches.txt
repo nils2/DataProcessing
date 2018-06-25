@@ -1,0 +1,77 @@
+Voor het samenvoegen naar de mainbranch toe
+ZORG ER VOOR DAT JE IN DE GOEDE MAP ZIT MET JE TERMINAL
+
+
+stap 1:
+zorg dat je in de goede branch zit door ->
+git checkout <branchnaam>
+
+stap 1.5:
+als je alle veranderingen die je hebt gemaakt wil bekijken dan ->
+git status
+(dit geeft de bestanden weer die zijn veranderd)
+
+stap 2:
+add je veranderingen aan git ->
+git add <naam bestand, voor alle bestanden gebruik . >
+
+stap 3:
+beschrijf je veranderingen ->
+git commit -m "<je beschrijving>"
+
+stap 4:
+stuur het door naar je branch ->
+git push
+
+stap 5:
+verander naar de hoofdbranch ->
+git checkout <hoofdbranch, meestal is dit master>
+
+stap 6:
+haal alle veranderingen op van de master ->
+git pull
+
+stap 7:
+voeg de branches samen ->
+git merge <branchnaam die je met de hoofdbranch wil samenvoegen>
+
+stap 8:
+push deze veranderingen door naar de servers ->
+git push origin <hoofdbranch>
+
+
+--------------------------------------------------------------------------------
+
+
+Voor het samenvoegen van de mainbranch af
+
+
+Stap 1:
+ga naar de branch die je 'gelijk' wil maken aan de mainbranch ->
+git checkout <branchnaam>
+
+stap 2:
+voeg deze samen met de mainbranch ->
+git merge <hoofdbranch>
+
+stap 3:
+voeg de veranderingen toe aan de server ->
+git push origin <branchnaam>
+
+
+--------------------------------------------------------------------------------
+
+
+Alternatief
+
+Stap 1:
+ga naar de branch die je 'gelijk' wil maken aan de mainbranch ->
+git checkout <branchnaam>
+
+Stap2:
+gebruik je mainbranch om je branch te veranderen ->
+git rebase <hoofdbranch>
+
+Stap 3:
+voeg de veranderingen toe aan de server ->
+git push origin <branchnaam>
