@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../DOCS/ak47.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
     <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
     <script type="text/javascript">
@@ -58,16 +60,30 @@
       float: right;
       }
       .row1{
-        margin-left: 30%;
+        min-height:500px;
         text-align:center;
       }
       .row2{
-        margin-left: 20%;
+        min-height:500px;
         text-align:center;
+        margin-bottom: 100px;
       }
 
       .header-right {
       float: right;
+      }
+      .footer {
+         position: fixed;
+         height: 40px;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         background-color: #f1f1f1;
+         color: black;
+         text-align: center;
+      }
+      h1 {
+        font-size: 30px;
       }
       @media screen and (max-width: 500px) {
       .header a {
@@ -85,31 +101,53 @@
 <body>
   <nav>
   <div class="header">
-    <a class="logo">DangerousGuns</a>
+    <a class="logo"><i class="fas fa-eye"></i> DangerousGuns</a>
     <div class="header-right">
-      <a class="active" href="../../index.html">Home</a>
-      <a href="incidents.html">Incidents</a>
-      <a href="bars.html">Involved</a>
-      <a href="maps.html">Places</a>
+      <a class="active" href="../../index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="incidents.html"><i class="fas fa-ambulance"></i> Incidents</a>
+      <a href="bars.html"><i class="fas fa-user-secret"></i> Involved</a>
+      <a href="maps.html"><i class="fas fa-map-pin"></i> Places</a>
     </div>
   </div>
   </nav>
-  <section class="row1">
-    <div class="bk-root">
-        <div class="bk-plotdiv" id="f1113a16-4428-4d05-a675-3a083ec03dc0"></div>
-    </div>
+  <section style="text-align: center;">
+    <h1>Involved</h1>
+    <p>Crimes such as gun violence involve actual persons.</p>
+    <p>Our research shows that luckily most of those persons are adults.</p>
+    <p>Eventhough it is known that police men are often sloppy with their reports, a condiderable amount of teens and children were involved these past four years.</p>
   </section>
   <section class="row1">
     <div class="bk-root">
-        <div class="bk-plotdiv" id="003851ca-0098-42cc-b2bd-6378ea53aa32"></div>
+        <center><div class="bk-plotdiv" id="f1113a16-4428-4d05-a675-3a083ec03dc0"></div></center>
     </div>
+  </section>
+  <section style="text-align: center;">
+    <p>The next graph shows that most are of male gender. That doesn't mean women just get cought in crossfire.</p>
+    <p>No because a story has to sides just as there are female police officers, there are woman involved in crime.</p>
+    <p>Some of the incidents are caused by woman or sometimes by gangs which included female suspects.</p>
+  </section>
+  <section class="row1">
+    <div class="bk-root">
+        <center><div class="bk-plotdiv" id="003851ca-0098-42cc-b2bd-6378ea53aa32"></div></center>
     </div>
+  </section>
+  <section style="text-align: center;">
+    <p>The sloppiness of officers is shown in the amount of relationships reported.</p>
+    <p>90% was not reported. But from the ones that where, Lovers or former lovers, family and armed robbery take most of the pie in occupation.</p>
+    <p>This leaves nothing to conclude because of the absense of more data. And so no relationships between suspects and victems can be concluded.</p>
+  </section>
+  <section style="margin-left: 20%; min-height:550px;">
+    <img src="../../DOCS/relationships.JPG" alt="Relationships" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em; height: 500px; width: 500px;">
+    <img src="../../DOCS/zoom-relationships.JPG" alt="Zoomed-Relationships" style="float: left; width: 49%; margin-right: 1%; margin-bottom: 0.5em; height: 500px; width: 500px;">
   </section>
   <section class="row2">
     <div class="bk-root">
-        <div class="bk-plotdiv" id="205d0885-5e77-4f22-98a3-34890ad8d194"></div>
+        <center><div class="bk-plotdiv" id="205d0885-5e77-4f22-98a3-34890ad8d194"></div></center>
     </div>
   </section>
+  <div class="footer">
+    <p>Contact us for more information at: 020-3948384 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Or mail to: dangerousguns@gmail.com</p>
+  </div>
   <script type="application/json" id="de369cbd-18f1-4f12-87ff-421be81e53a6">
     {"5658640a-2593-47b1-bd6c-36e20ca64c91":{"roots":{"references":[{"attributes":{"source":{"id":"35adfdc7-2c75-484e-a73e-74eb844f502d","type":"ColumnDataSource"}},"id":"c2f3eddd-0c40-4192-8b25-bf65b443299d","type":"CDSView"},{"attributes":{"axis_label":"Amount of persons","formatter":{"id":"00bb7447-d5c6-436d-a851-05889e485419","type":"BasicTickFormatter"},"plot":{"id":"fc0d5e65-b0c4-408f-875e-50790b500976","subtype":"Figure","type":"Plot"},"ticker":{"id":"55f6699f-d331-4aae-955c-b7bc774ba9fc","type":"BasicTicker"}},"id":"b952052a-a23a-4fc1-8702-2a0d96677a6b","type":"LinearAxis"},{"attributes":{},"id":"0269f509-7ed0-4483-9d0a-9a782e3ffb5a","type":"UnionRenderers"},{"attributes":{"axis_label":"Genders","formatter":{"id":"d56655cd-21a7-4eb0-bd7b-298aa5d2d264","type":"CategoricalTickFormatter"},"plot":{"id":"fc0d5e65-b0c4-408f-875e-50790b500976","subtype":"Figure","type":"Plot"},"ticker":{"id":"a7f0d469-0d74-430a-a6f9-71495e52cc08","type":"CategoricalTicker"}},"id":"8bac114e-c3b4-4a72-b257-8ce6824b3099","type":"CategoricalAxis"},{"attributes":{},"id":"a7f0d469-0d74-430a-a6f9-71495e52cc08","type":"CategoricalTicker"},{"attributes":{"callback":null,"factors":["Unknown","Female","Male"]},"id":"acfbaaaf-4ec9-4cb1-8aca-4d893fdfa5c9","type":"FactorRange"},{"attributes":{},"id":"2705349e-c931-4d2a-ae2a-20e5e5dc4d0c","type":"Selection"},{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"fc0d5e65-b0c4-408f-875e-50790b500976","subtype":"Figure","type":"Plot"},"ticker":{"id":"a7f0d469-0d74-430a-a6f9-71495e52cc08","type":"CategoricalTicker"}},"id":"00ae7197-ed8b-488d-a2a4-4775cfe73a32","type":"Grid"},{"attributes":{"callback":null,"data":{"fill_color":["#99d594","#ffffbf","#fc8d59"],"line_color":["#99d594","#ffffbf","#fc8d59"],"top":[35518,41213,295850],"x":["Unknown","Female","Male"]},"selected":{"id":"2705349e-c931-4d2a-ae2a-20e5e5dc4d0c","type":"Selection"},"selection_policy":{"id":"0269f509-7ed0-4483-9d0a-9a782e3ffb5a","type":"UnionRenderers"}},"id":"35adfdc7-2c75-484e-a73e-74eb844f502d","type":"ColumnDataSource"},{"attributes":{"fill_color":{"field":"fill_color"},"line_color":{"field":"line_color"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"0ddd3fda-377e-4591-b008-9e02701d5ff9","type":"VBar"},{"attributes":{},"id":"55f6699f-d331-4aae-955c-b7bc774ba9fc","type":"BasicTicker"},{"attributes":{"plot":null,"text":"Amount of a gender involved in all violence"},"id":"dd499b8d-6a53-45c8-a086-31ac487d7a67","type":"Title"},{"attributes":{"dimension":1,"plot":{"id":"fc0d5e65-b0c4-408f-875e-50790b500976","subtype":"Figure","type":"Plot"},"ticker":{"id":"55f6699f-d331-4aae-955c-b7bc774ba9fc","type":"BasicTicker"}},"id":"bc644f77-6529-436f-ad2a-1bdc9ca87711","type":"Grid"},{"attributes":{"callback":null,"mode":"vline","renderers":"auto","tooltips":[["value","@x"],["amount","@top"]]},"id":"0e3d0a36-421e-485e-b6ac-5c31339641d4","type":"HoverTool"},{"attributes":{},"id":"5a5012ff-90e4-4762-9165-c97d8a770bff","type":"PanTool"},{"attributes":{},"id":"d56655cd-21a7-4eb0-bd7b-298aa5d2d264","type":"CategoricalTickFormatter"},{"attributes":{},"id":"21fc32b4-b765-466f-8884-ec2df81bd176","type":"CategoricalScale"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.9},"x":{"field":"x"}},"id":"4a702e0f-ba28-4f61-b9a6-0fe7c79c856c","type":"VBar"},{"attributes":{"data_source":{"id":"35adfdc7-2c75-484e-a73e-74eb844f502d","type":"ColumnDataSource"},"glyph":{"id":"0ddd3fda-377e-4591-b008-9e02701d5ff9","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"4a702e0f-ba28-4f61-b9a6-0fe7c79c856c","type":"VBar"},"selection_glyph":null,"view":{"id":"c2f3eddd-0c40-4192-8b25-bf65b443299d","type":"CDSView"}},"id":"1d60e843-0430-46e2-9634-ca925f0a8f34","type":"GlyphRenderer"},{"attributes":{"use_scientific":false},"id":"00bb7447-d5c6-436d-a851-05889e485419","type":"BasicTickFormatter"},{"attributes":{},"id":"b944dbd2-dc3a-4d60-a994-b9c746a31ade","type":"WheelZoomTool"},{"attributes":{"below":[{"id":"8bac114e-c3b4-4a72-b257-8ce6824b3099","type":"CategoricalAxis"}],"left":[{"id":"b952052a-a23a-4fc1-8702-2a0d96677a6b","type":"LinearAxis"}],"plot_height":400,"renderers":[{"id":"8bac114e-c3b4-4a72-b257-8ce6824b3099","type":"CategoricalAxis"},{"id":"00ae7197-ed8b-488d-a2a4-4775cfe73a32","type":"Grid"},{"id":"b952052a-a23a-4fc1-8702-2a0d96677a6b","type":"LinearAxis"},{"id":"bc644f77-6529-436f-ad2a-1bdc9ca87711","type":"Grid"},{"id":"1d60e843-0430-46e2-9634-ca925f0a8f34","type":"GlyphRenderer"}],"title":{"id":"dd499b8d-6a53-45c8-a086-31ac487d7a67","type":"Title"},"toolbar":{"id":"1c8af959-2d17-40a9-85ac-9c166c667f22","type":"Toolbar"},"x_range":{"id":"acfbaaaf-4ec9-4cb1-8aca-4d893fdfa5c9","type":"FactorRange"},"x_scale":{"id":"21fc32b4-b765-466f-8884-ec2df81bd176","type":"CategoricalScale"},"y_range":{"id":"982f642a-02ea-4a0a-b7a5-82d72f0b4db4","type":"DataRange1d"},"y_scale":{"id":"cf3ddb2b-42c8-4e58-a61b-dcb7fdcf4cb5","type":"LinearScale"}},"id":"fc0d5e65-b0c4-408f-875e-50790b500976","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"cf3ddb2b-42c8-4e58-a61b-dcb7fdcf4cb5","type":"LinearScale"},{"attributes":{},"id":"b79e8161-c752-4de7-8581-8c44ee44ceb5","type":"ResetTool"},{"attributes":{"callback":null,"start":0},"id":"982f642a-02ea-4a0a-b7a5-82d72f0b4db4","type":"DataRange1d"},{"attributes":{},"id":"81268ee3-d406-4ed7-b565-4ae32642135e","type":"SaveTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"0e3d0a36-421e-485e-b6ac-5c31339641d4","type":"HoverTool"},{"id":"5a5012ff-90e4-4762-9165-c97d8a770bff","type":"PanTool"},{"id":"b944dbd2-dc3a-4d60-a994-b9c746a31ade","type":"WheelZoomTool"},{"id":"b79e8161-c752-4de7-8581-8c44ee44ceb5","type":"ResetTool"},{"id":"81268ee3-d406-4ed7-b565-4ae32642135e","type":"SaveTool"}]},"id":"1c8af959-2d17-40a9-85ac-9c166c667f22","type":"Toolbar"}],"root_ids":["fc0d5e65-b0c4-408f-875e-50790b500976"]},"title":"Bokeh Application","version":"0.12.16"}}
   </script>

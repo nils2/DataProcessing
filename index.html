@@ -2,6 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="DOCS/ak47.png" type="image/gif" sizes="32x32">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
   <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
   <script type="text/javascript">
@@ -71,6 +73,16 @@
     p{
       color: black;
     }
+    .footer {
+       position: fixed;
+       left: 0;
+       height: 40px;
+       bottom: 0;
+       width: 100%;
+       background-color: #f1f1f1;
+       color: black;
+       text-align: center;
+    }
 
     @media screen and (max-width: 500px) {
       body{
@@ -95,20 +107,20 @@
 </head>
 
 <body>
-  <nav>
-  <div class="header">
-    <a class="logo">DangerousGuns</a>
-    <div class="header-right">
-      <a class="active" href="index.html">Home</a>
-      <a href="CODE/HTML/incidents.html">Incidents</a>
-      <a href="CODE/HTML/bars.html">Involved</a>
-      <a href="CODE/HTML/maps.html">Places</a>
+    <nav>
+    <div class="header">
+      <a class="logo"><i class="fas fa-eye"></i> DangerousGuns</a>
+      <div class="header-right">
+        <a class="active" href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="CODE/HTML/incidents.html"><i class="fas fa-ambulance"></i> Incidents</a>
+        <a href="CODE/HTML/bars.html"><i class="fas fa-user-secret"></i> Involved</a>
+        <a href="CODE/HTML/maps.html"><i class="fas fa-map-pin"></i> Places</a>
+      </div>
     </div>
-  </div>
-</nav>
+    </nav>
     <section>
       <div class="intro">
-      <p><strong> "Never bring a knife to a gun fight!"</strong></p>
+      <h3><strong> "Never bring a knife to a gun fight!"</strong></h3>
       <p>This quote is quite often said because you will never be able to reach the shooter with a knife</p>
       <p>We decided to make this site because eventhough sometimes sound travels faster then a bullet, or one could argue a rumour does to, we believe and know one things for certain:</p>
       <p>A bullet will never travel as fast as light! So with the light from people's screens, we hope to be faster then a bullet and reach people's minds and human hearth's</p>
@@ -117,5 +129,8 @@
 
     </div>
   </section>
+  <div class="footer">
+    <p>Contact us for more information at: 020-3948384 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Or mail to: dangerousguns@gmail.com</p>
+  </div>
 </body>
 </html>
