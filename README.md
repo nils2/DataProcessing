@@ -1,4 +1,5 @@
 # DataPreprocessing
 gun violence groep 30
+Fabian van Stijn, Loes Gennissen, Djanira dos Santos Gomez, Nils Peters
 
-commit test
+https://nils2.github.io/DataProcessing/
